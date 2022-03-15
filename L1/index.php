@@ -4,6 +4,8 @@
 	echo($d);
 ?>
 
+<p>	Лабораторная работа №1:</p>
+
 <ul> 
 	<li> <a href='/lab-1-1.php'> lab-1-1 </a> </li>
 	<li> <a href='/lab-1-2.php'> lab-1-2 </a> </li>
@@ -21,3 +23,5 @@
 	<li> <a href='/lab-2-10.php'> lab-2-10 </a> </li>
 	<li> <a href='/lab-2-11.php'> lab-2-11 </a> </li>
 </ul> 
+
+<p>	Лабораторная работа №2:</p>
