@@ -1,9 +1,8 @@
 <html>
 <head><title> Сведения о Фильмах </title></head>
 <div align="left">
-<a href="http://f0592930.xsph.ru//">Вернуться назад</a></div>
+<a href="http://f0592930.xsph.ru/">Вернуться назад</a></div>
 <body>
-
 
 <lable align="center">
 <div align="center">
@@ -37,7 +36,7 @@
         echo "<td>" . $row['director'] . "</td>";
         echo "<td>" . $row['year'] . "</td>";
         echo "<td>" . $row['fees'] . "</td>";
-
+        
         echo "<td><a href='edit_films.php?id_film=" . $row['id_film']
             . "'>Редактировать</a></td>";
         echo "<td><a href='delete_films.php?id_film=" . $row['id_film']

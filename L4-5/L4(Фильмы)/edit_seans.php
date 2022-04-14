@@ -45,7 +45,6 @@ if ($prod) {
 
 }
 
-
 print "<form action='save_edit_seans.php' method='get'>";
 
 $result = $mysqli->query("SELECT id_film, name_film FROM films WHERE id_film <> '$id_film' ");

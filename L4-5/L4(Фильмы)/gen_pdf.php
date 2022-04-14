@@ -42,7 +42,6 @@ $result = $mysqli->query("SELECT
 
 if ($result) {
     $counter = 1;
-    // Для каждой строки из запроса
     while ($row = $result->fetch_row()) {
         $pdf->Cell($w[0], $h, $counter, 'LRBT', '0', 'C', true);
         $pdf->Cell($w[1], $h, $row[0], 'LRB');
