@@ -1,7 +1,8 @@
 <html>
 <head><title>Киносеансы</title></head>
+
 <div>
-<h2>Администратор</h2>
+<h2>Оператор</h2>
 </div><br><br>
 <body align="center">
 
@@ -19,11 +20,10 @@
         <th>Всего мест</th>
         <th>Занятых мест</th>
         <th>Редактировать</th>
-        <th>Уничтожить</th>
     </tr>
     </tr>
     <?php
-    include ("checks.php");
+    include("checks.php");
     require_once 'connect1.php';
     $mysqli = new mysqli($host, $user, $password, $database);
     if ($mysqli->connect_errno) {
@@ -44,24 +44,27 @@ LEFT JOIN zal ON seans.id_zal=zal.id_zal");
             $zal = $row['zal'];
             $count_svob = $row['count_svob'];
             $count_zan = $row['count_zan'];
+
             $date_seans = date('d-m-Y H:i:s', strtotime($date_seans));
+            
             echo "<tr>";
             echo "<td>$id</td><td>$date_seans</td><td>$films</td><td>$zal</td><td>$count_svob</td><td>$count_zan</td>";
 
             echo "<td><a href='edit_sean.php?id=" . $row['id_seans']
-                . "'>Редактировать</a></td>";
-            echo "<td><a href='delete_sean.php?id=" . $row['id_seans']
-                . "'>Удалить</a></td>";
+                . "'>Редактировать</a></td>"; 
             echo "</tr>";
+            $counter++;
         }
     }
     print "</table>";
-    echo "<p><a href=new_sean.php> Добавить сеанс </a>";
+    print("<p>Всего сеансов: $counter </p>");
+    echo "<p><a href=new_sean.php> Добавить Сеанс </a>";
     if ($_SESSION['type'] == 1)
         echo "<p><a href=film.php> Вернуться назад </a>";
     elseif ($_SESSION['type'] == 2)
         echo "<p><a href=filmAdm.php> Вернуться назад </a>";
     include("checkSession.php");
     ?>
+
 </body>
 </html>

@@ -34,6 +34,8 @@ require_once 'connect1.php'; ?>
                 echo "</tr>";
             }
             print "</table>";
+            $num_rows = mysqli_num_rows($result);
+            print("<P> Всего пользователей: $num_rows </p>");
             echo "<p><a href=new_users.php> Добавить пользователя </a>";
             echo "<p><a href=filmAdm.php> На главную </a>";
         } else {

@@ -23,5 +23,3 @@
 	<li> <a href='/lab-2-10.php'> lab-2-10 </a> </li>
 	<li> <a href='/lab-2-11.php'> lab-2-11 </a> </li>
 </ul> 
-
-<p>	Лабораторная работа №2:</p>

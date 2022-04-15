@@ -37,7 +37,7 @@
     }
     print "</table>";
     $num_rows = mysqli_num_rows($result); 
-    print("<P>Всего Залов: $num_rows </p>");
+    print("<P>Всего залов: $num_rows </p>");
     echo "<p><a href=new_zal.php> Добавить кинозал </a>";
     if ($_SESSION['type'] == 1)
         echo "<p><a href=film.php> Вернуться назад </a>";

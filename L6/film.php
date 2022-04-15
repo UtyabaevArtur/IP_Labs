@@ -47,6 +47,8 @@
         echo "</tr>";
     }
     print "</table>";
+    $num_rows = mysqli_num_rows($result); 
+    print("<P>Всего фильмов: $num_rows </p>");
     if ($_SESSION['type'] == 1) {
         echo "<p><a href=new_film.php> Добавить фильм</a>";
         echo "<p><a href=sean.php>Киносеанс</a>";
